@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<!-- 🌟 Meta tags for SEO and responsiveness -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=0.75" />
+	<meta name="description" content="Narii - Where expectations are surpassed, and client experiences are redefined.">
+	
+	<!-- ✨ Google Fonts for a friendly look -->
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma+2:400,600" rel="stylesheet">
+	<!-- 🖼️ Favicon for browser tab -->
+	<link rel="icon" type="image/png" href="images/Favicon.png">
+	<!-- 🎨 Main stylesheets -->
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="slide.css">
+	
+	<!-- 📱 Open Graph meta tags for social sharing -->
+	<meta name="og:image" itemprop="image" content="images/logo.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://narii.xyz">
+	<meta property="og:site_name" content="Narii">
+	<meta property="og:title" content="Narii">
+	<meta property="og:description" content="Where expectations are surpassed, and client experiences are redefined.">
+	
+	<title>Narii</title>
+	
+	<!-- 🌈 Custom cursor and background styling -->
+	<style>
+	body {
+     background-image: url("files/background.svg");
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+	 height: 200vh;
+	 -webkit-background-size: 100%;
+     -moz-background-size: cover;
+     -o-background-size: cover;
+     background-size: cover;
+	 overflow-x: hidden;
+	 position: relative;
+	}
+	* { cursor: url(cursor.png) 10 8, default; }
+	</style>
+</head>
+
+<body>
+	<!-- 🏠 Logo section -->
+	<a href="/">
+		<img class="logo" src="images/logo.png" alt="Narii Logo">
+	</a>
+	
+	<!-- 💻 Main GUI image with tilt effect -->
+	<div class="gui" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
+		<img src="images/gui.png" alt="Narii GUI">
+	</div>
+	
+	<!-- 🌟 Main content section -->
+	<div class="main-content"> 
+		<text class="title">Narii</text>
+		<text class="maindesc">Excellence delivered. Expectations exceeded.</text>
+		
+		<!-- 🚀 Action buttons -->
+		<a type="button" class="button button2" href="https://narii.xyz/forums" target="_blank">Forums</a>
+		<a type="button" class="button button1" href="" target="_blank">Download</a>
+		<a type="button" class="button button3" href="media.html" target="_blank">Media</a>
+
+		<!-- 🛡️ Features section: icons and descriptions -->
+		<div class="features-row">
+			<div class="feature"><img src="files/Lock.svg" class="icon icon1" alt="Security"><desc class="desc1">Unbreakable <span class="accent1">Security</span></desc></div>
+			<div class="feature"><img src="files/Star.svg" class="icon icon2" alt="Quality"><desc class="desc2">Premium <span class="accent2">Performance</span></desc></div>
+			<div class="feature"><img src="files/Staff.svg" class="icon icon3" alt="Community"><desc class="desc3">Used by <font color="#4ec404"><span id="member-count"></span>+</font> Members</desc></div>
+			<div class="feature"><img src="files/quality.svg" class="icon icon4" alt="Quality"><desc class="desc4"><span class="accent3">Trusted</span> since 2019. Battle-tested excellence.</desc></div>
+		</div>
+
+		<!-- 💬 Testimonials slideshow -->
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="images/quote1.png" style="width:100%" class="nodrag" alt="Testimonial 1">
+			</div>
+			<div class="mySlides fade">
+				<img src="images/quote2.png" style="width:100%" class="nodrag" alt="Testimonial 2">
+			</div>
+			<div class="mySlides fade">
+				<img src="images/quote3.png" style="width:100%" class="nodrag" alt="Testimonial 3">
+			</div>
+			<!-- 🟣 Slideshow navigation dots -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+			</div>
+		</div>
+	</div>
+	
+	<div><text class="icontitle"></text></div>
+	
+	<!-- 🎞️ Slideshow functionality -->
+	<script>
+	// Simple slideshow for testimonials!
+	var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+		var i;
+		var slides = document.getElementsByClassName("mySlides");
+		var dots = document.getElementsByClassName("dot");
+		// Hide all slides
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		// Move to next slide
+		slideIndex++;
+		if (slideIndex > slides.length) {slideIndex = 1}    
+		// Update dot indicators
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		// Show current slide and activate dot
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		// Auto-advance every 20 seconds
+		setTimeout(showSlides, 20000);
+	}
+	// Manual slide navigation
+	function currentSlide(n) {
+		slideIndex = n - 1;
+		showSlides();
+	}
+	</script>
+	
+	<!-- 🎯 Enhanced tilt library for GUI -->
+	<script type="text/javascript" src="js/vanilla-tilt.js"></script>
+
+	<!-- ✨ GUI Animation Script -->
+	<script>
+	// Animate GUI after page load
+	document.addEventListener('DOMContentLoaded', function() {
+		const gui = document.querySelector('.gui');
+		if (gui) {
+			gui.style.opacity = '0';
+			gui.style.transform = 'rotate(0.5deg) scale(1.15, 1.15) translateX(50px)';
+			setTimeout(() => {
+				gui.style.transition = 'opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+				gui.style.opacity = '1';
+				gui.style.transform = 'rotate(0.5deg) scale(1.15, 1.15) translateX(0)';
+				// Reset transition after animation
+				setTimeout(() => {
+					gui.style.transition = 'transform 0.3s ease';
+				}, 1200);
+			}, 200);
+		}
+	});
+	</script>
+
+	<!-- 🌟 Animated member count script -->
+	<script>
+	(function() {
+	  const minStart = 1200;
+	  const minIncrease = 1;
+	  const maxIncrease = 7;
+	  const intervalMin = 2000; // ms
+	  const intervalMax = 5000; // ms
+	  const storageKey = 'narii-member-count';
+	  let last = parseInt(localStorage.getItem(storageKey), 10);
+	  if (isNaN(last) || last < minStart) last = minStart;
+	  let next = last + Math.floor(Math.random() * (maxIncrease - minIncrease + 1)) + minIncrease;
+	  localStorage.setItem(storageKey, next);
+	  let current = last;
+	  const el = document.getElementById('member-count');
+	  // Add a CSS class for glow effect
+	  const glowClass = 'member-glow';
+	  if (!document.getElementById('member-glow-style')) {
+	    const style = document.createElement('style');
+	    style.id = 'member-glow-style';
+	    style.textContent = `
+	      .${glowClass} {
+	        text-shadow: 0 0 12px #4ec404, 0 0 24px #ae52d4;
+	        color: #fff !important;
+	        transition: text-shadow 0.3s, color 0.3s;
+	      }
+	    `;
+	    document.head.appendChild(style);
+	  }
+	  // Animate up to the new value, digit by digit
+	  function animateTo(target, duration = 900) {
+	    const start = current;
+	    const startTime = performance.now();
+	    function tick(now) {
+	      const elapsed = now - startTime;
+	      const progress = Math.min(elapsed / duration, 1);
+	      const value = Math.floor(start + (target - start) * progress);
+	      el.textContent = value;
+	      if (progress < 1) {
+	        requestAnimationFrame(tick);
+	      } else {
+	        el.textContent = target;
+	        el.classList.add(glowClass);
+	        setTimeout(() => el.classList.remove(glowClass), 400);
+	      }
+	      current = value;
+	    }
+	    requestAnimationFrame(tick);
+	  }
+	  animateTo(next);
+	  // Keep increasing every 2-5 seconds
+	  function keepIncreasing() {
+	    let inc = Math.floor(Math.random() * (maxIncrease - minIncrease + 1)) + minIncrease;
+	    let target = current + inc;
+	    localStorage.setItem(storageKey, target);
+	    animateTo(target);
+	    setTimeout(keepIncreasing, Math.floor(Math.random() * (intervalMax - intervalMin + 1)) + intervalMin);
+	  }
+	  setTimeout(keepIncreasing, Math.floor(Math.random() * (intervalMax - intervalMin + 1)) + intervalMin);
+	})();
+	</script>
+
+	<!-- 💖 Cute animated footer -->
+	<footer class="custom-footer">
+	  made with <span class="footer-heart">❤️</span> by <a href="https://github.com/L0veNote" class="footer-link" target="_blank" rel="noopener">Narii</a>
+	</footer>
+	<script src="js/daji.js"></script>
+	<script src="js/PreventManipulation.js"></script>
+	<script src="js/nozoom.js"></script>
+	<script src="js/Fuckyou.js"></script>
+	<script src="js/DisableKeys.js"></script>
+</body>
+</html>
