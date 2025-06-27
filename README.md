@@ -19,6 +19,7 @@ A sleek, premium website for your needs of selling software.
 
 - 🎨 **Modern Design** - Clean, professional aesthetics, modern animations.
 - ⚡ **Fast** - Optimized performance
+- 📱 **Mobile Responsive**
 
 ## 🚀 **Quick Start**
 
@@ -29,11 +30,12 @@ cd WebStore
 ```
 
 ## 📝 **To-do List**
-- 📱 Make the website responsive on mobile etc.
-- 🪲 Fix mouse hover effects in some places
-- 🖌️ Change the buttons style/Make them look better
-- 📎 Move the media.html into index html without breaking anything
-
+- 📱 ~Make the website responsive on mobile etc~. ✅
+- 🪲 ~Fix mouse hover effects in some places~ ✅
+- 🖌️ ~Change the buttons style/Make them look better~✅
+- 📎~Move the media.html into index html without breaking anything~ ✅
+- 💬 Change or Improve testimonials slideshow 
+- 🧊 Change icons in features-row
 
 
 <div align="center">
