@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1920" height="1080" fill="#111118"/>
+  <path d="M0 900 Q480 800 960 900 T1920 900 V1080 H0 Z" fill="url(#wave1)" fill-opacity="0.7"/>
+  <path d="M0 1000 Q600 950 1200 1040 T1920 1000 V1080 H0 Z" fill="url(#wave2)" fill-opacity="0.5"/>
+  <ellipse cx="1600" cy="200" rx="220" ry="80" fill="url(#glow1)" fill-opacity="0.18"/>
+  <ellipse cx="400" cy="180" rx="180" ry="60" fill="url(#glow2)" fill-opacity="0.13"/>
+  <defs>
+    <linearGradient id="wave1" x1="0" y1="900" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#23243a"/>
+      <stop offset="1" stop-color="#3a2a4d"/>
+    </linearGradient>
+    <linearGradient id="wave2" x1="0" y1="1000" x2="1920" y2="1080" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#181828"/>
+      <stop offset="1" stop-color="#2d2340"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientTransform="translate(1600 200) scale(220 80)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a259ff"/>
+      <stop offset="1" stop-color="#23243a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientTransform="translate(400 180) scale(180 60)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60c6fd"/>
+      <stop offset="1" stop-color="#23243a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

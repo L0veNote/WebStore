@@ -10,9 +10,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Tamma+2:400,600" rel="stylesheet">
 	<!-- 🖼️ Favicon for browser tab -->
 	<link rel="icon" type="image/png" href="images/Favicon.png">
-	<!-- 🎨 Main stylesheets -->
+	<!-- 🎨 Main stylesheet -->
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="slide.css">
 	
 	<!-- 📱 Open Graph meta tags for social sharing -->
 	<meta name="og:image" itemprop="image" content="images/logo.png">
@@ -26,61 +25,55 @@
 </head>
 
 <body>
-	<!-- 🏠 Logo section -->
+	<!-- 🏠 LOGO SECTION: Logo and link to homepage -->
 	<a href="/">
-		<img class="logo" src="images/logo.png" alt="Narii Logo">
+		<img class="logo" src="images/logo.png" alt="Narii Logo" draggable="false">
 	</a>
 	
-	<!-- 💻 Main GUI image with tilt effect -->
+	<!-- 🖥️ GUI SECTION: Main GUI image with tilt effect -->
 	<div class="gui" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="1000">
-		<img src="images/gui.png" alt="Narii GUI">
+		<img src="images/gui.png" alt="Narii GUI" draggable="false">
 	</div>
 	
-	<!-- 🌟 Main content section -->
+	<!-- 🌟 MAIN CONTENT: Title, description, buttons, features, slider -->
 	<div class="main-content"> 
 		<text class="title">Narii</text>
 		<text class="maindesc">Excellence delivered. Expectations exceeded.</text>
 		
-		<!-- 🚀 Action buttons -->
+		<!-- 🚀 BUTTONS: Action buttons for forums and download -->
 		<div class="button-container">
 			<a type="button" class="button button2" href="https://narii.xyz/forums" target="_blank">Forums</a>
 			<a type="button" class="button button1" href="" target="_blank">Download</a>
 		</div>
 
-		<!-- 🛡️ Features section: icons and descriptions -->
+		<!-- 🛡️ FEATURES: Icons and descriptions -->
 		<div class="features-row">
-			<div class="feature"><img src="files/Lock.svg" class="icon icon1" alt="Security"><desc class="desc1">Unbreakable <span class="accent1">Security</span></desc></div>
-			<div class="feature"><img src="files/Star.svg" class="icon icon2" alt="Quality"><desc class="desc2">Premium <span class="accent2">Performance</span></desc></div>
-			<div class="feature"><img src="files/Staff.svg" class="icon icon3" alt="Community"><desc class="desc3">Used by <font color="#4ec404"><span id="member-count"></span>+</font> Members</desc></div>
-			<div class="feature"><img src="files/quality.svg" class="icon icon4" alt="Quality"><desc class="desc4"><span class="accent3">Trusted</span> since 2019. Battle-tested excellence.</desc></div>
+			<div class="feature"><img src="files/eye.svg" class="icon icon1" alt="Security" draggable="false"><desc class="desc1">Unbreakable <span class="accent1">Security</span></desc></div>
+			<div class="feature"><img src="files/rocket.svg" class="icon icon2" alt="Quality" draggable="false"><desc class="desc2">Premium <span class="accent2">Performance</span></desc></div>
+			<div class="feature"><img src="files/members.svg" class="icon icon3" alt="Community" draggable="false"><desc class="desc3">Used by <font color="#4ec404"><span id="member-count" class="member-gradient"></span>+</font> Members</desc></div>
+			<div class="feature"><img src="files/checkmark.svg" class="icon icon4" alt="Quality" draggable="false"><desc class="desc4"><span class="accent3">Trusted</span> since 2024. Battle-tested excellence.</desc></div>
 		</div>
 
-		<!-- 💬 Testimonials slideshow -->
-		<div class="slideshow-container">
-			<div class="mySlides fade">
-				<img src="images/quote1.png" style="width:100%" class="nodrag" alt="Testimonial 1">
+		<!-- 💬 SLIDESHOW: Custom Testimonials Slideshow (auto, no controls) -->
+		<div class="custom-slider" id="custom-slider">
+			<div class="custom-slide active">
+				<img src="images/quote1.png" alt="Testimonial 1" class="nodrag" draggable="false" />
 			</div>
-			<div class="mySlides fade">
-				<img src="images/quote2.png" style="width:100%" class="nodrag" alt="Testimonial 2">
+			<div class="custom-slide">
+				<img src="images/quote2.png" alt="Testimonial 2" class="nodrag" draggable="false" />
 			</div>
-			<div class="mySlides fade">
-				<img src="images/quote3.png" style="width:100%" class="nodrag" alt="Testimonial 3">
-			</div>
-			<!-- 🟣 Slideshow navigation dots -->
-			<div style="text-align:center">
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
+			<div class="custom-slide">
+				<img src="images/quote3.png" alt="Testimonial 3" class="nodrag" draggable="false" />
 			</div>
 		</div>
 	</div>
 	
-	<!-- 🎬 Media Section -->
+	<!-- 🎬 MEDIA SECTION: Latest videos and content -->
 	<div class="media-section" id="media-section">
 		<text class="media-title">Narii Media</text>
 		<text class="media-subtitle">Latest Videos & Content</text>
 		
-		<!-- 🎥 Media grid with videos -->
+		<!-- 📺 MEDIA GRID: YouTube videos -->
 		<div class="media-grid">
 			<div class="media-item">
 				<iframe src="https://www.youtube.com/embed/Ci_zad39Uhw" 
@@ -119,44 +112,12 @@
 	
 	<div><text class="icontitle"></text></div>
 	
-	<!-- 🎞️ Slideshow functionality -->
-	<script>
-	// Simple slideshow for testimonials!
-	var slideIndex = 0;
-	showSlides();
-
-	function showSlides() {
-		var i;
-		var slides = document.getElementsByClassName("mySlides");
-		var dots = document.getElementsByClassName("dot");
-		// Hide all slides
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		}
-		// Move to next slide
-		slideIndex++;
-		if (slideIndex > slides.length) {slideIndex = 1}    
-		// Update dot indicators
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		// Show current slide and activate dot
-		slides[slideIndex-1].style.display = "block";  
-		dots[slideIndex-1].className += " active";
-		// Auto-advance every 20 seconds
-		setTimeout(showSlides, 20000);
-	}
-	// Manual slide navigation
-	function currentSlide(n) {
-		slideIndex = n - 1;
-		showSlides();
-	}
-	</script>
-	
-	<!-- 🎯 Enhanced tilt library for GUI -->
+	<!-- 🎞️ Custom Slideshow functionality, GUI animacja i licznik memberów przeniesione do js/ui.js -->
 	<script type="text/javascript" src="js/vanilla-tilt.js"></script>
+	<script src="js/ui.js"></script>
+	<script src="js/protection.js"></script>
 
-	<!-- ✨ GUI Animation Script -->
+	<!-- 🎯 Enhanced tilt library for GUI -->
 	<script>
 	// Animate GUI after page load
 	document.addEventListener('DOMContentLoaded', function() {
@@ -177,77 +138,12 @@
 	});
 	</script>
 
-	<!-- 🌟 Animated member count script -->
-	<script>
-	(function() {
-	  const minStart = 1200;
-	  const minIncrease = 1;
-	  const maxIncrease = 7;
-	  const intervalMin = 2000; // ms
-	  const intervalMax = 5000; // ms
-	  const storageKey = 'narii-member-count';
-	  let last = parseInt(localStorage.getItem(storageKey), 10);
-	  if (isNaN(last) || last < minStart) last = minStart;
-	  let next = last + Math.floor(Math.random() * (maxIncrease - minIncrease + 1)) + minIncrease;
-	  localStorage.setItem(storageKey, next);
-	  let current = last;
-	  const el = document.getElementById('member-count');
-	  // Add a CSS class for glow effect
-	  const glowClass = 'member-glow';
-	  if (!document.getElementById('member-glow-style')) {
-	    const style = document.createElement('style');
-	    style.id = 'member-glow-style';
-	    style.textContent = `
-	      .${glowClass} {
-	        text-shadow: 0 0 12px #4ec404, 0 0 24px #4ec404;
-	        color: #fff !important;
-	        transition: text-shadow 0.3s, color 0.3s;
-	      }
-	    `;
-	    document.head.appendChild(style);
-	  }
-	  // Animate up to the new value.
-	  function animateTo(target, duration = 900) {
-	    const start = current;
-	    const startTime = performance.now();
-	    function tick(now) {
-	      const elapsed = now - startTime;
-	      const progress = Math.min(elapsed / duration, 1);
-	      const value = Math.floor(start + (target - start) * progress);
-	      el.textContent = value;
-	      if (progress < 1) {
-	        requestAnimationFrame(tick);
-	      } else {
-	        el.textContent = target;
-	        el.classList.add(glowClass);
-	        setTimeout(() => el.classList.remove(glowClass), 400);
-	      }
-	      current = value;
-	    }
-	    requestAnimationFrame(tick);
-	  }
-	  animateTo(next);
-	  // Keep increasing every 2-5 seconds
-	  function keepIncreasing() {
-	    let inc = Math.floor(Math.random() * (maxIncrease - minIncrease + 1)) + minIncrease;
-	    let target = current + inc;
-	    localStorage.setItem(storageKey, target);
-	    animateTo(target);
-	    setTimeout(keepIncreasing, Math.floor(Math.random() * (intervalMax - intervalMin + 1)) + intervalMin);
-	  }
-	  setTimeout(keepIncreasing, Math.floor(Math.random() * (intervalMax - intervalMin + 1)) + intervalMin);
-	})();
-	</script>
+	<!-- 🎯 Enhanced tilt library for GUI -->
+	<script type="text/javascript" src="js/vanilla-tilt.js"></script>
 
 	<!-- 💖 Cute animated footer -->
 	<footer class="custom-footer">
 	  made with <span class="footer-heart">❤️</span> by <a href="https://github.com/L0veNote" class="footer-link" target="_blank" rel="noopener">Narii</a>
 	</footer>
-	<!-- 🛡️ Extra scripts for security and UX -->
-	<script src="js/daji.js"></script>
-	<script src="js/PreventManipulation.js"></script>
-	<script src="js/nozoom.js"></script>
-	<script src="js/Fuckyou.js"></script>
-	<script src="js/DisableKeys.js"></script>
 </body>
 </html>
